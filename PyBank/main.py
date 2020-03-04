@@ -78,11 +78,11 @@ with open(output_path, 'w') as output:
     writer = csv.writer(output)
     
     writer.writerow(['Financial Analysis'])
-    writer.writerow(['------------------------------------------'])
-    writer.writerow(['Total Months:', total_months])
-    writer.writerow(['Total:', total_profit])
-    writer.writerow(['Average Change:',average_change])
-    writer.writerow(['Greatest Increase in Profits:', max_change_month, max_change])
-    writer.writerow(['Greatest Decrease in Profits:', min_change_month, min_change])
+    writer.writerow(['---------------------------------------------------------'])
+    writer.writerow(['Total Months:' + '\t\t\t' + str(total_months)])
+    writer.writerow(['Total:' + '\t\t\t\t' + str(total_profit)])
+    writer.writerow(['Average Change:' + '\t\t\t' + str(round(average_change, 2))])
+    writer.writerow(['Greatest Increase in Profits:' + '\t' + str(max_change_month) + '\t' + str(max_change)])
+    writer.writerow(['Greatest Decrease in Profits:' + '\t' + str(min_change_month) + '\t' + str(min_change)])
     
     output.close()
